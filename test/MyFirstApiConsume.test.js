@@ -71,7 +71,7 @@ describe('First Api Tests', () => {
         expect(response.body.json).to.eql(body);
       });
   });
-  
+
   it('Consume PUT Service', () => {
     const body = {
       name: 'John',
@@ -100,3 +100,4 @@ describe('First Api Tests', () => {
       });
   });
 });
+
