@@ -3,6 +3,8 @@ const statusCode = require('http-status-codes');
 const chai = require('chai');
 
 const { expect } = chai;
+const { assert } = chai;
+
 
 describe('First Api Tests', () => {
   it('Consume GET Service', () => agent.get('https://httpbin.org/ip').then((response) => {
@@ -50,6 +52,7 @@ describe('First Api Tests', () => {
       .query(query)
       .then((response) => {
         expect(response.status).to.equal(statusCode.OK);
+        assert.isEmpty(response.body);
       });
   });
 
